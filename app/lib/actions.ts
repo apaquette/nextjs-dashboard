@@ -42,7 +42,7 @@ export async function createInvoice(prevState: State, formData: FormData){
     if(!validatedFields.success){
         return {
             errors: validatedFields.error.flatten().fieldErrors,
-            message: 'Missing FIelds. Failed to Create Invoice.',
+            message: 'Missing Fields. Failed to Create Invoice.',
         };
     }
 
@@ -85,7 +85,7 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
     
     const { customerId, amount, status } = validatedFields.data;
     const amountInCents = amount * 100;
-    
+
     try{
         await sql `
             UPDATE invoices
