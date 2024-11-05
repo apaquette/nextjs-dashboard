@@ -18,17 +18,6 @@ export const authConfig = {
             // false otherwise (not logged in)
             return (!isOnDashboard && !isLoggedIn) || isLoggedIn;
 
-
-
-            // // redirect if logged in but not on dashboard
-            // if(isLoggedIn && !isOnDashboard)
-            //     return Response.redirect(new URL('/dashboard', nextUrl));
-
-            // // return true if on dashboard and logged in
-            // // OR
-            // // return true if loggedIn but not on dashboard
-            // return (isOnDashboard && isLoggedIn) || (!isOnDashboard && isLoggedIn)
-
             //TODO: project code to be reworked with better/more intuitive logic
             // if(isOnDashboard){
             //     if(isLoggedIn) return true;
